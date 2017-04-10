@@ -1,0 +1,59 @@
+<!-- index.html -->
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="numbertowords.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="stylesheets/main.css" rel="stylesheet" />
+    <script src="core.js"></script>
+
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS -->
+<body>
+
+<html>
+
+<div ng-app="myModule">
+
+
+    <uib-tabset type="tabs">
+        <uib-tab tab-controller="MyCustomController as ctrl">
+            <uib-tab-heading>
+                <span ng-bind="ctrl.title"></span>
+            </uib-tab-heading>
+            <div class="task1">
+                <input ng-model="ctrl.numb" class="row form-control">
+                <button class="row btn btn-primary" ng-click="ctrl.getExcelColumnCode(ctrl.numb)">Get Excel Column</button>
+                <span class="row out-put"> Out Put: {{ctrl.convertedNumb}}</span>
+            </div>
+        </uib-tab>
+        <uib-tab tab-controller="MyCustomController2 as ctrl2">
+            <uib-tab-heading>
+                <span ng-bind="ctrl2.title"></span>
+            </uib-tab-heading>
+            <div class="task2">
+                <input ng-model="ctrl2.str" class="row form-control">
+                <button class="row btn btn-primary" ng-click="ctrl2.convertToWordRepresentation(ctr2.str)">Convert to Word</button>
+            </div>
+        </uib-tab>
+        <uib-tab tab-controller="MyCustomController3 as ctrl3">
+            <uib-tab-heading>
+                <span ng-bind="ctrl3.title"></span>
+            </uib-tab-heading>
+            <div class="button green">A</div>
+        </uib-tab>
+        <uib-tab tab-controller="MyCustomController4 as ctrl4">
+            <uib-tab-heading>
+                <span ng-bind="ctrl4.title"></span>
+            </uib-tab-heading>
+            <div class="gradient"></div>
+        </uib-tab>
+    </uib-tabset>
+
+</div>
+</html>
+ </body>
