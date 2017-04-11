@@ -1,6 +1,6 @@
 # Interview Submission
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+Angular app with  Node server
 
 ## Running Locally
 
